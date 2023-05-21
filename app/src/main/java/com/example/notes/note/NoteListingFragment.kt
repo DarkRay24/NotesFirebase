@@ -18,7 +18,7 @@ class NoteListingFragment : Fragment() {
     val TAG: String = "NoteListingFragment"
 
     private lateinit var binding: FragmentNoteListingBinding
-    val viewModel: NoteViewModel by viewModels()
+    private val viewModel: NoteViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
