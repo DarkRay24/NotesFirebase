@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/background_light"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvNoteIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Note ID"
+            android:textColor="@color/text_color_light"
+            android:alpha="0.7"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNoteId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="FasKashbasgAs"
+            android:textColor="@color/text_color_light"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvNoteIdLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvNoteIdLabel" />
+
+        <TextView
+            android:id="@+id/tvMsgLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            app:layout_constraintStart_toStartOf="@id/tvNoteIdLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteIdLabel"
+            android:text="Message"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvNoteBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvMsgLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvMsgLabel"
+            android:text="Niraj"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteBody" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteBody"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/btnEdit"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_edit"
+                android:alpha="0.7"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:contentDescription="Edit Button" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:alpha="0.7"
+                android:layout_weight="1"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Delete Button"/>
+
+
+        </LinearLayout>
+
+        
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

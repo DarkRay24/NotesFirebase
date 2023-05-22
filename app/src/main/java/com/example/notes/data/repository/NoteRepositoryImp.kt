@@ -35,11 +35,13 @@ class NoteRepositoryImp(
 
 
     override fun addNote(note: Note, result: (UiState<String>) -> Unit) {
-        database.collection(FireStoreTables.NOTE)
-            .add(note)
+        val document = database.collection(FireStoreTables.NOTE).document()
+        note.id = document.id
+        document
+            .set(note)
             .addOnSuccessListener {
                 result.invoke(
-                    UiState.Success(it.id)
+                    UiState.Success("Note has been created successfully")
                 )
             }
             .addOnFailureListener {
